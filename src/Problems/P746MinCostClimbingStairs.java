@@ -1,6 +1,6 @@
-package P746_Min_Cost_Climbing_Stairs;
+package Problems;
 
-public class Solution {
+public class P746MinCostClimbingStairs {
 
     public int minCostClimbingStairs(int[] cost) {
 

@@ -1,25 +1,36 @@
+import Problems.P35SearchInsertPosition;
+import Problems.P66PlusOne;
+import Problems.P746MinCostClimbingStairs;
+
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
-import P746_Min_Cost_Climbing_Stairs.*;
+//import P746_Min_Cost_Climbing_Stairs.*;
+
 
 public class MainClass {
 
-    public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("input/746.txt"));
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args)  {
 
-        int T = sc.nextInt();
-        for (int test_case = 1; test_case <= T; test_case++) {
-            Solution solution = new Solution();
+        // P746
+        // [10, 15, 20] : 15
+        // [1, 100, 1, 1, 1, 100, 1, 1, 100, 1] : 6
+        System.out.println(
+                new P746MinCostClimbingStairs().minCostClimbingStairs(new int[]{10, 15, 20}));
 
-            int size = sc.nextInt();
-            int[] input = new int[size];
-            for (int i=0; i<size; i++) {
-                input[i] = sc.nextInt();
-            }
-            System.out.println("#" + test_case + " " + solution.minCostClimbingStairs(input));
-        }
+        // P35
+        // [1,3,5,6], 5 : 2
+        // [1,3,5,6], 2 : 1
+        // [1,3,5,6], 7 : 4
+        // [1,3,5,6], 0 : 0
+        System.out.println(
+                new P35SearchInsertPosition().searchInsert(new int[]{1 ,3 ,5 ,6}, 5));
+
+        // P66
+        // [1,2,3] : [1,2,4]
+        System.out.println((Arrays.toString(
+                new P66PlusOne().plusOne(new int[]{9,9}))));
     }
 }
