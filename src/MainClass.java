@@ -1,3 +1,4 @@
+import Problems.P1TwoSum;
 import Problems.P35SearchInsertPosition;
 import Problems.P66PlusOne;
 import Problems.P746MinCostClimbingStairs;
@@ -32,5 +33,13 @@ public class MainClass {
         // [1,2,3] : [1,2,4]
         System.out.println((Arrays.toString(
                 new P66PlusOne().plusOne(new int[]{9,9}))));
+
+        // P1
+        // [3, 2, 4], 6 : [1, 2]
+        // [2, 7, 11, 15], 9 : [0, 1]
+        // [0, 4, 3, 0], 0 : [0, 3]
+        // [-1,-2,-3,-4,-5], -8 : [2, 4]
+        System.out.println(Arrays.toString(
+                new P1TwoSum().twoSum(new int[]{-1,-2,-3,-4,-5}, -8)));
     }
 }
