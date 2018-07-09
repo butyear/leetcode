@@ -44,5 +44,12 @@ public class MainClass {
         // 123450 : 54321
         System.out.println(
                 new P7ReverseInteger().reverse(123450));
+
+        // P9
+        // 121 : true
+        // -12321 : false
+        // 10 : false
+        System.out.println(
+                new P9PalindromeNumber().isPalindrome(2147483647));
     }
 }
