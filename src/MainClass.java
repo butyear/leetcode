@@ -1,7 +1,4 @@
-import Problems.P1TwoSum;
-import Problems.P35SearchInsertPosition;
-import Problems.P66PlusOne;
-import Problems.P746MinCostClimbingStairs;
+import Problems.*;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -41,5 +38,11 @@ public class MainClass {
         // [-1,-2,-3,-4,-5], -8 : [2, 4]
         System.out.println(Arrays.toString(
                 new P1TwoSum().twoSum(new int[]{-1,-2,-3,-4,-5}, -8)));
+
+        // P7
+        // 1534236469 : 0 (overflow)
+        // 123450 : 54321
+        System.out.println(
+                new P7ReverseInteger().reverse(123450));
     }
 }
