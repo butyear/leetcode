@@ -1,9 +1,6 @@
 import Problems.*;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Arrays;
-import java.util.Scanner;
 
 //import P746_Min_Cost_Climbing_Stairs.*;
 
@@ -51,5 +48,12 @@ public class MainClass {
         // 10 : false
         System.out.println(
                 new P9PalindromeNumber().isPalindrome(2147483647));
+
+        // P21
+        // [1,2,4]
+        // [1,3,4]
+        // -> [1, 1, 2, 3, 4, 4]
+        P21MergeTwoSortedLists p21 = new P21MergeTwoSortedLists();
+        p21.print(p21.mergeTwoLists(p21.getTestL1(), p21.getTestL2()));
     }
 }
