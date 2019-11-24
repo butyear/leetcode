@@ -55,5 +55,11 @@ public class MainClass {
         // -> [1, 1, 2, 3, 4, 4]
         P21MergeTwoSortedLists p21 = new P21MergeTwoSortedLists();
         p21.print(p21.mergeTwoLists(p21.getTestL1(), p21.getTestL2()));
+
+        // P26
+        // [0,0,1,1,1,2,2,3,3,4] -> 5
+        System.out.println(
+                new P26RemoveDuplicatesFromSortedArray().removeDuplicates(
+                        new int[] {0,0,1,1,1,2,2,3,3,4}));
     }
 }

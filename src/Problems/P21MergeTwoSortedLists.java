@@ -31,6 +31,7 @@ public class P21MergeTwoSortedLists {
             System.out.print(node.val + " -> ");
             node = node.next;
         }
+        System.out.println();
     }
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
