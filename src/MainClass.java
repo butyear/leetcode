@@ -61,5 +61,11 @@ public class MainClass {
         System.out.println(
                 new P26RemoveDuplicatesFromSortedArray().removeDuplicates(
                         new int[] {0,0,1,1,1,2,2,3,3,4}));
+
+        // P27
+        // [0,1,2,2,3,0,4,2] -> 5
+        System.out.println(
+                new P27RemoveElement().removeElement(
+                        new int[] {0,1,2,2,3,0,4,2}, 2));
     }
 }
