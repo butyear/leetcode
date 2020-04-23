@@ -76,5 +76,12 @@ public class MainClass {
         P2AddTwoNumbers.ListNode l1 = p2.makeTestNode(342);
         P2AddTwoNumbers.ListNode l2 = p2.makeTestNode(465);
         p2.print(p2.addTwoNumbers(l1, l2));
+
+        // 30day coding challenge
+        LeetCodingChallenge30Day challenge = new LeetCodingChallenge30Day();
+        System.out.println(challenge.singleNumber(new int[]{4, 1, 2, 1, 2}));
+        System.out.println(challenge.isHappy(25));
+        System.out.println(challenge.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+        challenge.moveZeroes(new int[]{0, 1, 0, 3, 12});
     }
 }
