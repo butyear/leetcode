@@ -26,10 +26,10 @@ public class P26RemoveDuplicatesFromSortedArray {
         }
 
         // print
-        for (int i=0; i<count; i++) {
-            System.out.print(nums[i] + " ");
-        }
-        System.out.println();
+//        for (int i=0; i<count; i++) {
+//            System.out.print(nums[i] + " ");
+//        }
+//        System.out.println();
 
         return count;
     }

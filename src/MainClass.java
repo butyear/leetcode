@@ -58,14 +58,23 @@ public class MainClass {
 
         // P26
         // [0,0,1,1,1,2,2,3,3,4] -> 5
-        System.out.println(
+        System.out.println("P26 : " +
                 new P26RemoveDuplicatesFromSortedArray().removeDuplicates(
                         new int[] {0,0,1,1,1,2,2,3,3,4}));
 
         // P27
         // [0,1,2,2,3,0,4,2] -> 5
-        System.out.println(
+        System.out.println("P27 : " +
                 new P27RemoveElement().removeElement(
                         new int[] {0,1,2,2,3,0,4,2}, 2));
+
+        // P2
+        // Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+        // Output: 7 -> 0 -> 8
+        // Explanation: 342 + 465 = 807.
+        P2AddTwoNumbers p2 = new P2AddTwoNumbers();
+        P2AddTwoNumbers.ListNode l1 = p2.makeTestNode(342);
+        P2AddTwoNumbers.ListNode l2 = p2.makeTestNode(465);
+        p2.print(p2.addTwoNumbers(l1, l2));
     }
 }

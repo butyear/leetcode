@@ -27,6 +27,7 @@ public class P21MergeTwoSortedLists {
     }
 
     public void print(ListNode node) {
+        System.out.print("P21 : ");
         while (node != null) {
             System.out.print(node.val + " -> ");
             node = node.next;

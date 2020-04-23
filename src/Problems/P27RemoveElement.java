@@ -14,10 +14,10 @@ public class P27RemoveElement {
         }
 
         // print
-        for (int i=0; i<index; i++) {
-            System.out.print(nums[i] + " ");
-        }
-        System.out.println();
+//        for (int i=0; i<index; i++) {
+//            System.out.print(nums[i] + " ");
+//        }
+//        System.out.println();
 
         return index;
     }
