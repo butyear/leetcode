@@ -1,32 +1,32 @@
 package Problems;
 
-class ListNode {
+class P21ListNode {
     int val;
-    ListNode next;
-    ListNode(int x) {
+    P21ListNode next;
+    P21ListNode(int x) {
         val = x;
     }
 }
 
 public class P21MergeTwoSortedLists {
 
-    public ListNode getTestL1() {
-        ListNode n1 = new ListNode(1);
-        ListNode n2 = new ListNode(2);
-        n2.next = new ListNode(4);
+    public P21ListNode getTestL1() {
+        P21ListNode n1 = new P21ListNode(1);
+        P21ListNode n2 = new P21ListNode(2);
+        n2.next = new P21ListNode(4);
         n1.next = n2;
         return n1;
     }
 
-    public ListNode getTestL2() {
-        ListNode n1 = new ListNode(1);
-        ListNode n2 = new ListNode(3);
-        n2.next = new ListNode(4);
+    public P21ListNode getTestL2() {
+        P21ListNode n1 = new P21ListNode(1);
+        P21ListNode n2 = new P21ListNode(3);
+        n2.next = new P21ListNode(4);
         n1.next = n2;
         return n1;
     }
 
-    public void print(ListNode node) {
+    public void print(P21ListNode node) {
         System.out.print("P21 : ");
         while (node != null) {
             System.out.print(node.val + " -> ");
@@ -35,7 +35,7 @@ public class P21MergeTwoSortedLists {
         System.out.println();
     }
 
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public P21ListNode mergeTwoLists(P21ListNode l1, P21ListNode l2) {
         if (l1 == null && l2 == null) {
             return null;
         } else if (l1 == null) {
@@ -44,24 +44,24 @@ public class P21MergeTwoSortedLists {
             return l1;
         }
 
-        ListNode start, last;
+        P21ListNode start, last;
 
         // set start node
         if (l1.val < l2.val) {
-            last = new ListNode(l1.val);
+            last = new P21ListNode(l1.val);
             l1 = l1.next;
         } else {
-            last = new ListNode(l2.val);
+            last = new P21ListNode(l2.val);
             l2 = l2.next;
         }
         start = last;
 
         while (l1 != null && l2 != null) {
             if (l1.val < l2.val) {
-                last.next = new ListNode(l1.val);
+                last.next = new P21ListNode(l1.val);
                 l1 = l1.next;
             } else {
-                last.next = new ListNode(l2.val);
+                last.next = new P21ListNode(l2.val);
                 l2 = l2.next;
             }
             last = last.next;

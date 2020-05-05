@@ -1,6 +1,7 @@
 import Problems.*;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 //import P746_Min_Cost_Climbing_Stairs.*;
 
@@ -9,6 +10,7 @@ public class MainClass {
 
     public static void main(String[] args)  {
 
+        /*
         // P746
         // [10, 15, 20] : 15
         // [1, 100, 1, 1, 1, 100, 1, 1, 100, 1] : 6
@@ -76,12 +78,30 @@ public class MainClass {
         P2AddTwoNumbers.ListNode l1 = p2.makeTestNode(342);
         P2AddTwoNumbers.ListNode l2 = p2.makeTestNode(465);
         p2.print(p2.addTwoNumbers(l1, l2));
+        */
 
         // 30day coding challenge
         LeetCodingChallenge30Day challenge = new LeetCodingChallenge30Day();
+        // week1
         System.out.println(challenge.singleNumber(new int[]{4, 1, 2, 1, 2}));
         System.out.println(challenge.isHappy(25));
         System.out.println(challenge.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
         challenge.moveZeroes(new int[]{0, 1, 0, 3, 12});
+        System.out.println(challenge.maxProfit(new int[] {1, 2, 3, 4, 5, 4, 3, 2, 5, 6, 10, 9}));
+        System.out.println(challenge.groupAnagrams(new String[] {"eat", "tea", "tan", "ate", "nat", "bat"}));
+        System.out.println(challenge.countElements(new int[] {1,3,2,3,5,0}));
+        // week2
+        challenge.printNode(challenge.middleNode(challenge.createTestHead()));
+        challenge.backspaceCompare("a#c", "asdf##asdf");
+        challenge.testMinStack();
+        challenge.diameterOfBinaryTree(challenge.createTestNode());
+        challenge.lastStoneWeight(new int[] {10,2, 1});
+        challenge.findMaxLength(new int[] {0,1,1,1,1,0,0,0,1});
+
+        // May Coding Challenge
+        MayLeetCodingChallenge mayChallenge = new MayLeetCodingChallenge();
+        mayChallenge.findComplement(5);
+        System.out.println(mayChallenge.firstUniqChar("loveleetcode"));
+        mayChallenge.firstBadVersion(2126753390);
     }
 }
