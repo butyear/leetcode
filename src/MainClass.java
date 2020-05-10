@@ -99,9 +99,16 @@ public class MainClass {
         challenge.findMaxLength(new int[] {0,1,1,1,1,0,0,0,1});
 
         // May Coding Challenge
+        // week1
         MayLeetCodingChallenge mayChallenge = new MayLeetCodingChallenge();
         mayChallenge.findComplement(5);
         System.out.println(mayChallenge.firstUniqChar("loveleetcode"));
         mayChallenge.firstBadVersion(2126753390);
+        System.out.println(mayChallenge.majorityElement(new int[] {2,2,1,1,1,2,2}));
+        mayChallenge.isCousins(mayChallenge.createTestRoot(), 4, 3);
+        // week2
+        mayChallenge.checkStraightLine(new int[][] { {2,2},{3,4},{1, 2}, {1,1},{4,5},{5,6},{7,7}});
+        System.out.println("isPerfectSquare = " + mayChallenge.isPerfectSquare(2126753390));
+        System.out.println(mayChallenge.findJudge(4, new int[][] { {1,3},{1,4},{2,3},{2,4},{4,3}}));
     }
 }
