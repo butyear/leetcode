@@ -204,6 +204,95 @@ public class MayLeetCodingChallenge {
         return -1;
     }
 
+    // 4th
+    // Input:
+    // image = [[1,1,1],[1,1,0],[1,0,1]]
+    // sr = 1, sc = 1, newColor = 2
+    // Output: [[2,2,2],[2,2,0],[2,0,1]]
+    private int height;
+    private int width;
+    private int floodColor;
+    public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
+        if (image.length == 0) return image;
+
+        height = image.length;
+        width = image[0].length;
+        floodColor = image[sr][sc];
+
+        if (floodColor != newColor) trace(image, sr, sc, newColor);
+
+        return image;
+    }
+
+    private void trace(int[][] image, int i, int j, int newColor) {
+        if (i < 0 || i >= height || j < 0 || j >= width || image[i][j] != floodColor) return;
+
+        image[i][j] = newColor;
+
+        trace(image, i - 1, j, newColor);
+        trace(image, i + 1, j, newColor);
+        trace(image, i, j - 1, newColor);
+        trace(image, i, j + 1, newColor);
+    }
+
+    // 5th
+    // Input: [1,1,2,3,3,4,4,8,8]
+    // Output: 2
+    public int singleNonDuplicate(int[] nums) {
+        int sum = 0;
+        for (int num : nums) {
+            sum ^= num;
+        }
+        System.out.println("sum = " + sum);
+        return sum;
+    }
+
+    // 6th
+    // Input: num = "1432219", k = 6
+    // Output: "1219"
+    // Explanation: Remove the three digits 4, 3, and 2 to form the new number 1219 which is the smallest.
+    public String removeKdigits(String num, int k) {
+        if (num.length() == k) return "0";
+
+        StringBuilder result = new StringBuilder();
+
+        int rIndex = 0;
+        for (int i = 0; i < num.length(); i++) {
+            char value = num.charAt(i);
+            if (k == 0) {
+                result.append(num.substring(i));
+                break;
+            }
+
+            if (rIndex == 0 || result.charAt(rIndex-1) <= value) {
+                result.append(value);
+                rIndex++;
+            } else {
+                while(rIndex != 0 && result.charAt(rIndex-1) > value && k != 0) {
+                    k--;
+                    result.deleteCharAt(rIndex-1);
+                    rIndex--;
+                }
+
+                result.append(value);
+                rIndex++;
+            }
+        }
+
+
+        while (k != 0) {
+            result.deleteCharAt(result.length() - 1);
+            k--;
+        }
+
+        while(result.length() != 0 && result.charAt(0) == '0') {
+            result.deleteCharAt(0);
+        }
+
+        if (result.length() == 0) return "0";
+
+        return result.toString();
+    }
 }
 
  class TreeNode {

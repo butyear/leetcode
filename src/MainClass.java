@@ -110,5 +110,8 @@ public class MainClass {
         mayChallenge.checkStraightLine(new int[][] { {2,2},{3,4},{1, 2}, {1,1},{4,5},{5,6},{7,7}});
         System.out.println("isPerfectSquare = " + mayChallenge.isPerfectSquare(2126753390));
         System.out.println(mayChallenge.findJudge(4, new int[][] { {1,3},{1,4},{2,3},{2,4},{4,3}}));
+        mayChallenge.floodFill(new int[][]{{0,0,0},{0,1,1}}, 1, 1, 1);
+        mayChallenge.singleNonDuplicate(new int[]{1,1,2,3,3,4,4,8,8});
+        System.out.println("removeKdigits = " + mayChallenge.removeKdigits("1432219", 3));
     }
 }
