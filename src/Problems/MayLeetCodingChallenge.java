@@ -293,6 +293,26 @@ public class MayLeetCodingChallenge {
 
         return result.toString();
     }
+
+    // 7th
+    // Trie trie = new Trie();
+    //
+    // trie.insert("apple");
+    // trie.search("apple");   // returns true
+    // trie.search("app");     // returns false
+    // trie.startsWith("app"); // returns true
+    // trie.insert("app");
+    // trie.search("app");     // returns true
+    public void implementTrie() {
+        Trie trie = new Trie();
+
+        trie.insert("apple");
+        System.out.println("search apple = " + trie.search("apple"));
+        System.out.println("search app = " + trie.search("app"));
+        System.out.println("startswith app = " + trie.startsWith("app"));
+        trie.insert("app");
+        System.out.println("search app = " + trie.search("app"));
+    }
 }
 
  class TreeNode {
@@ -313,3 +333,82 @@ public class MayLeetCodingChallenge {
          this.right = right;
      }
  }
+
+class Trie {
+
+    private Node root;
+
+    /** Initialize your data structure here. */
+    public Trie() {
+        root = new Node();
+    }
+
+    /** Inserts a word into the trie. */
+    public void insert(String word) {
+        Node curr = root;
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            curr.pushNext(c);
+            curr = curr.getNext(c);
+        }
+        curr.setFin();
+    }
+
+    /** Returns if the word is in the trie. */
+    public boolean search(String word) {
+        Node curr = root;
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (curr.hasNext(c)) {
+                curr = curr.getNext(c);
+            } else {
+                return false;
+            }
+        }
+
+        return curr.isFin();
+    }
+
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    public boolean startsWith(String prefix) {
+        Node curr = root;
+        for (int i = 0; i < prefix.length(); i++) {
+            char c = prefix.charAt(i);
+            if (curr.hasNext(c)) {
+                curr = curr.getNext(c);
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    static class Node {
+        private boolean isFin = false;
+        private Map<Character, Node> nextMap;
+
+        Node() {
+            nextMap = new HashMap<>();
+        }
+
+        void pushNext(char c) {
+            nextMap.putIfAbsent(c, new Node());
+        }
+
+        boolean hasNext(char c) {
+            return nextMap.containsKey(c);
+        }
+
+        Node getNext(char c) {
+            return nextMap.get(c);
+        }
+
+        void setFin() {
+            isFin = true;
+        }
+
+        boolean isFin() {
+            return isFin;
+        }
+    }
+}

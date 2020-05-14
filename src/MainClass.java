@@ -113,5 +113,6 @@ public class MainClass {
         mayChallenge.floodFill(new int[][]{{0,0,0},{0,1,1}}, 1, 1, 1);
         mayChallenge.singleNonDuplicate(new int[]{1,1,2,3,3,4,4,8,8});
         System.out.println("removeKdigits = " + mayChallenge.removeKdigits("1432219", 3));
+        mayChallenge.implementTrie();
     }
 }
